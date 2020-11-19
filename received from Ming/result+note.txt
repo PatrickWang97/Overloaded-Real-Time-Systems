@@ -1,0 +1,31 @@
+sat
+(model 
+  (define-fun b12 () Bool     # b12  false -> 任务1不在处理器2中运行
+    false)                                                                           
+  (define-fun b11 () Bool     # b11  true -> 任务1 在处理器2中运行
+    true)
+  (define-fun b31 () Bool      # b31  true -> 任务3 在处理器1中运行
+    true)
+  (define-fun b41 () Bool      #同上
+    true)
+  (define-fun b42 () Bool      #同上
+    false)
+  (define-fun s1 () Int           # s1   0  -> 任务1在 t=0 开始运行 
+    0)
+  (define-fun b32 () Bool
+    false)
+  (define-fun s2 () Int            # s2   3  -> 任务2 在 t=3 开始运行 
+    3)
+  (define-fun s3 () Int     
+    6)
+  (define-fun b22 () Bool
+    false)
+  (define-fun b21 () Bool
+    true)
+  (define-fun s4 () Int
+    9)
+  (define-fun mG () Int         # mG 16  -> 所有任务执行结束的最快时间-> t=16所有任务完成运行
+    16)
+)
+unsupported
+; get-objectives line: 41 position: 15

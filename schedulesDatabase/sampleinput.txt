@@ -1,0 +1,55 @@
+Input graph nomenclature
+=======================
+
+This is the expected GXL file format for input task graphs. The BASIC components are compulsary where as the other components are optional.
+
+<graph id="Graph_Type">
+/***Put components in the order BASIC, EXTENDED, Specialised and Meta-information. Leave the node weights and edge communications to 
+the end even though they are basic components. Placing it at the begining makes it hard for a human to read the graph
+charachteristics***/
+
+/********What meta-information is required is to be discussed and decided***/   
+     
+/**************BASIC component************/
+<attr name="No of nodes"> 
+<int>value</int>
+
+       
+/**************Extended components************/
+<attr name="CCR">
+<float>value</float>
+
+
+/**************Specialised component************/
+<attr name="Density">
+<float>value</float>
+
+
+   
+/**************Meta Information************/
+<attr name="Node concurrency">
+<int>value</int>
+
+
+/**************Meta Information************/
+<attr name="Total sequential time">
+<int>value</int>
+
+
+
+/**************BASIC components************/
+<node id="1">
+<attr name="Weight">
+<int>value</int>
+</node>   
+          
+<node id="2">
+<attr name="Weight">
+<int>value</int>
+</node>
+
+<edge from="1" to="2">
+<attr name="Weight">
+<int>value</int>
+</edge>
+/**************END BASIC components************/

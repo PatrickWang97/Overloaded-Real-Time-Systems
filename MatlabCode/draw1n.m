@@ -1,0 +1,11 @@
+yy=[1.0267 2.3012 2.5310 3.8632 9.0004 7.7234 19.2563 34.8698];
+ny=[0.0240 0.0310 0.0317 0.0367 0.0512 0.0475 0.0668 0.0810];
+yn=[0.1919 0.2789 0.3938 0.5169 0.6774 0.8473 1.0549 1.3168];
+nn=[0.0106 0.0107 0.0112 0.0126 0.0138 0.0147 0.0176 0.0194];
+num=[50 60 70 80 90 100 110 120];
+plot(num,yy,'m:x',num,ny,'b--o',num,yn,'g--s',num,nn,'r--d','LineWidth',1.2);
+set(gca,'Yscale','log','GridColor','k');
+xlabel('n','FontSize',24);
+ylabel('Average computation time (s)','FontSize',24);
+legend('Cheng et al.''s method in [1]','Removing redundant encoding','Eliminating successive SMT calls','Our updated SMT method','location','northwest');grid on;
+title('(a) ¦Ë = 1.','FontSize',30,'position',[85,0.0019]);

@@ -1,0 +1,85 @@
+Graph output nomenclature
+========================
+
+The expected GXL file format for task graphs are in the format specifed below. The BASIC components are compulsary where as the other 
+components are optional.
+NOTE: This GXL file may however (also) be an input to the ECLIPISE VISUALISATION PLUGIN.
+
+ /***Put components in the order BASIC, EXTENDED, Specialised and Meta-information, Communication Component, Processor Component. 
+Leave the node weights and edge communications to the end even though they are basic components. Placing it at the begining makes it hard
+for a human to read the graph charachteristics***/
+
+
+<graph id="graph_name"  metainformation="true/false" /*for e.g*/ hypergraph="False">
+
+           
+/**************BASIC component************/
+<attr name="No of nodes"> 
+<int>value</int>
+
+/**************Extended component-if any************/
+      
+
+
+/**************Specialised component-Graph Information************/
+<attr name="No of Directed Edges">
+<int>value</int>
+
+<attr name="No of Hyper Edges">
+<int>value</int>
+/**************END Specialised component-Graph Information************/   
+
+
+/**************Metainformation-if any************/
+
+
+
+/*****Communication Component*****/   
+<attr name="Duplex">
+<string>FULL_DUPLEX</string>
+
+<attr name="Topology">
+<string>ONE_PORT</string>
+/*****End Communication Component*****/   
+           
+/*****Processor Component*****/     
+<attr name="Processors">
+<int>value</int>
+
+/**************BASIC components with scheduling information************/
+
+<node id="1">
+<attr name="Start time">
+<int>value</int>
+<attr name="Weight">
+<int>value</int>
+<attr name="Finish time">
+<int>value</int>
+<attr name="Processor">
+<int>value</int>
+</node>
+
+
+<node id="2">
+<attr name="Start time">
+<int>value</int>
+<attr name="Weight">
+<int>value</int>
+<attr name="Finish time">
+<int>value</int>
+<attr name="Processor">
+<int>value</int>
+</node>
+
+/*The start time-in and start time-out will be present for a ONE_PORT model*/
+/*If they are absent, the corresponding attributes may be removed*/   
+<edge from="1" to="2">
+<attr name="Weight">
+<int>value</int>
+<attr name="Start Time - in">
+<int>value</int>
+<attr name="Start Time - out">
+<int>value</int>
+</edge>
+
+/**************END BASIC components with scheduling information************/

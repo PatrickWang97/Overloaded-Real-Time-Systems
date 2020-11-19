@@ -1,0 +1,31 @@
+sat
+(model 
+  (define-fun b12 () Bool
+    false)
+  (define-fun b11 () Bool
+    true)
+  (define-fun b31 () Bool
+    true)
+  (define-fun b41 () Bool
+    true)
+  (define-fun b42 () Bool
+    false)
+  (define-fun s1 () Int
+    0)
+  (define-fun b32 () Bool
+    false)
+  (define-fun s2 () Int
+    3)
+  (define-fun s3 () Int
+    6)
+  (define-fun b22 () Bool
+    false)
+  (define-fun b21 () Bool
+    true)
+  (define-fun s4 () Int
+    9)
+  (define-fun mG () Int
+    16)
+)
+unsupported
+; get-objectives line: 41 position: 15
